@@ -16,3 +16,9 @@ for((i=0; i<=${#arithmaticOperation[@]}; i++))
 do
   array[i]=${arithmaticOperation[result$((i+1))]}
 done
+
+echo "${array[@]}"
+echo "${array[@]}"
+echo "The computation expressions result in Descending"
+sortedDesc=($(echo ${array[@]}| tr " " "\n" | sort -nr))
+echo ${sortedDesc[@]}
